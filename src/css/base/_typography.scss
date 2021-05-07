@@ -1,0 +1,25 @@
+.empty {
+    color: map-get($ui-colors, gray-60 );
+    font-size: 20px;
+
+}
+
+.error-alert {
+    color: map-get($ui-colors , 'warning-default' );
+    margin: -16px 0 16px 0;
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 50px;
+    color: map-get($primary-colors, default )
+}
+h2 {
+    font-size: 35px; 
+}
+h3 {
+    font-size: 26px;
+}
+h4 {
+    font-size: 20px;
+}
