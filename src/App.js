@@ -1,5 +1,5 @@
 import './css/main.css';
-import { BusinessSearchResults, Login} from './screens/Screens.tsx';
+import { BusinessSearchResults, Login, Signup, ForgotPassword} from './screens/Screens.tsx';
 import { Footer } from './components/navigations/Footer';
 import {Redirect, Route, Switch} from 'react-router-dom';
 
@@ -16,7 +16,9 @@ function App() {
       <div className='content'>
         
         <Switch>
-          <Route path='/login' render={()=><Login /> } /> 
+          <Route path='/signin' render={()=><Login /> } /> 
+          <Route path='/signup' render={()=><Signup /> } /> 
+          <Route path='/forgotpassword' render={()=><ForgotPassword /> } /> 
           <Route path='/business-search' render={()=> <BusinessSearchResults />}/>  
           <Route path='/not-found'  />
           <Route path='/' exact />

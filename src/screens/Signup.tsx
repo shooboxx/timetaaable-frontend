@@ -1,11 +1,11 @@
 import React from 'react'
-import { LoginForm } from '../components/templates/LoginForm'
+import { SignupForm } from '../components/templates/SignupForm'
 import { RightPane } from '../components/templates/RightPane'
 import { LeftPane } from '../components/templates/LeftPane'
 import OnboadingIllustration from './../assets/images/OnboadingIllustration.svg'
 
 
-const Login: React.FC = () => {
+const Signup: React.FC = () => {
     return (
         <main className=' row side-by-side'>
             <LeftPane>
@@ -14,11 +14,12 @@ const Login: React.FC = () => {
                 <img className='pane-left-img' src={OnboadingIllustration} alt="Welcome" />
             </LeftPane>
             <RightPane>
-                <LoginForm />
+                <SignupForm />
+                
             </RightPane>
             
         </main>
     )
 }
 
-export {Login}
+export {Signup}

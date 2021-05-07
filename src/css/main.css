@@ -2,12 +2,6 @@ body {
   background-color: #ffffff;
 }
 
-html, * {
-  font-family: 'Poppins';
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 a {
   text-decoration: none;
   color: #6D6D6D;
@@ -18,13 +12,62 @@ a:visited, a:active, a:hover {
   color: #6D6D6D;
 }
 
-ul {
-  padding: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 400;
 }
 
-li {
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Poppins';
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol, ul {
   list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 .empty {
@@ -38,21 +81,58 @@ li {
   font-size: 14px;
 }
 
-h1 {
+.heading {
+  color: #3a3a3a;
+  margin: 0;
+  font-weight: 600;
+}
+
+.heading-1 {
   font-size: 50px;
+  margin-bottom: 32px;
+}
+
+.heading-2 {
+  font-size: 35px;
+  margin-bottom: 32px;
   color: #09BF9C;
 }
 
-h2 {
-  font-size: 35px;
-}
-
-h3 {
+.heading-3 {
   font-size: 26px;
 }
 
-h4 {
+.heading-4 {
   font-size: 20px;
+}
+
+.body {
+  color: #6D6D6D;
+  margin-bottom: 16px;
+}
+
+.body-big {
+  font-size: 16px;
+}
+
+.body-small {
+  font-size: 12px;
+}
+
+.label {
+  color: #3a3a3a;
+  font-family: 'Poppins';
+  font-weight: 400;
+}
+
+.label-regular {
+  font-size: 16px;
+  letter-spacing: 0.05rem;
+}
+
+.link-text a {
+  color: #09BF9C;
+  font-weight: 600;
 }
 
 .row {
@@ -64,13 +144,13 @@ h4 {
 .pane-right {
   width: 50%;
   padding: 8% 2%;
-  height: 80vh;
+  min-height: 50vh;
 }
 
 .pane-left {
   padding: 8% 2%;
   width: 50%;
-  height: 80vh;
+  min-height: 50vh;
 }
 
 .side-by-side {
@@ -82,6 +162,10 @@ h4 {
 .pane-left-img {
   max-width: 550px;
   width: 80%;
+}
+
+.linkbox {
+  margin-left: auto;
 }
 
 .footer {
@@ -111,7 +195,7 @@ h4 {
   color: #6D6D6D !important;
   width: 97%;
   font-size: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 4px;
 }
 
 .footer-container:not(:first-child) {
@@ -132,6 +216,10 @@ h4 {
   -ms-flex-line-pack: center;
       align-content: center;
   width: 80%;
+}
+
+.pane-form {
+  margin-left: auto;
 }
 
 /******** BUTTON BASE ***********/
@@ -462,17 +550,6 @@ h4 {
   cursor: pointer;
 }
 
-.label {
-  color: #3a3a3a;
-  font-family: 'Poppins';
-  font-weight: 400;
-}
-
-.label-regular {
-  font-size: 16px;
-  letter-spacing: 0.05rem;
-}
-
 .textbox {
   padding: 8px 16px;
   margin: 8px 0 16px 0;
@@ -521,7 +598,6 @@ h4 {
 
 .med-textbox {
   width: 100%;
-  height: 48px;
 }
 
 .search {

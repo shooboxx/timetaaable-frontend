@@ -10,16 +10,56 @@
     font-size: 14px;
 }
 
-h1 {
-    font-size: 50px;
-    color: map-get($primary-colors, default )
+.heading {
+    color: map-get($ui-colors, gray-100 );
+    margin: 0;
+    font-weight: 600;
+
+    &-1 {
+        font-size: 50px;
+        margin-bottom: 32px;
+    }
+
+    &-2 {
+        font-size: 35px; 
+        margin-bottom: 32px;
+        color: map-get($primary-colors, default); 
+
+    }
+    &-3 {
+        font-size: 26px;
+
+    }
+    &-4 {
+        font-size: 20px;
+    }
 }
-h2 {
-    font-size: 35px; 
+.body {
+    color: map-get($ui-colors, gray-80 );
+    margin-bottom: 16px;
+
+    &-big {
+        font-size: 16px;
+    }
+    &-small {
+        font-size: 12px;
+    }
 }
-h3 {
-    font-size: 26px;
-}
-h4 {
-    font-size: 20px;
+
+
+.label {
+    color: map-get($ui-colors, gray-100 );
+    font-family: 'Poppins';
+    font-weight: 400;
+
+    &-regular {
+        font-size: 16px;
+        letter-spacing: 0.05rem;
+    }
+} 
+
+.link-text a {
+    color: map-get($primary-colors, 'default');
+    font-weight: 600;
+    // font-size: 12px;
 }
