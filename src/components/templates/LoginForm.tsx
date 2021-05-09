@@ -40,7 +40,7 @@ const handleSubmit = (e: any) => {
 };
 
     return (
-        <div className='form'>
+        <div className='form pane-form'>
             <div className="side-by-side">
                 <div className="cta-title">
                     <h2 className='heading heading-3'>Sign in</h2>

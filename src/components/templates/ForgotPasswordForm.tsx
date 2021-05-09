@@ -4,10 +4,7 @@ import { TextField } from '../inputs/TextField';
 
 const ForgotPasswordForm: React.FC = () => {
 
-const [firstname, setFirstName] = useState('');
-const [lastName, setLastName] = useState('');
 const [email, setEmail] = useState('');
-const [password, setPassword] = useState('');
 const [error, setError] = useState<ErrObj>({});
 
 const user = {
@@ -37,7 +34,7 @@ const handleSubmit = (e: any) => {
 };
 
     return (
-        <div className='form'>
+        <div className='form pane-form'>
             <div className="side-by-side">
                 <div className="cta-title">
                     <h2 className='heading heading-3'>Forgot password</h2>

@@ -52,7 +52,7 @@ const handleSubmit = (e: any) => {
 };
 
     return (
-        <div className='form'>
+        <div className='form pane-form'>
             <div className="side-by-side">
                 <div className="cta-title">
                     <h2 className='heading heading-3'>Sign up</h2>
@@ -103,7 +103,7 @@ const handleSubmit = (e: any) => {
                     className='med-textbox'
                     error={error.passwordError}
                 />
-               <p className='body body-small'>Creating an account means that you’ve read our <span className="link-text"><Link className='body-small' to='terms-of-service'>Terms of Service</Link> </span> and <span className="link-text"><Link className='body-small' to='/privacy'>Privacy policy. </Link></span></p> 
+               <p className='body body-small'>Creating an account means that you’ve read and agreed to our <span className="link-text"><Link className='body-small' to='terms-of-service'>Terms of Service</Link> </span> and <span className="link-text"><Link className='body-small' to='/privacy'>Privacy policy. </Link></span></p> 
                <input type="submit" value="Sign up" className='btn btn-primary btn-form' />
             </form>    
 
