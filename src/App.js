@@ -1,5 +1,5 @@
 import './css/main.css';
-import { BusinessSearchResults, Login, Signup, ForgotPassword} from './screens/Screens.tsx';
+import { BusinessSearchResults, Login, Signup, ForgotPassword, Home, Business} from './screens/Screens.tsx';
 import { Footer } from './components/navigations/Footer';
 import { Navbar } from './components/navigations/Navbar';
 import {Redirect, Route, Switch} from 'react-router-dom';
@@ -25,8 +25,9 @@ function App() {
           {/* <div> */}
             
             <Route path='/business-search' render={()=> <BusinessSearchResults />}/>  
+            <Route path='/business' render={()=> <Business />}/>  
             <Route path='/not-found'  />
-            <Route path='/' exact />
+            <Route path='/' exact render={()=> <Home />}/>
             <Redirect to="/not-found" />
           {/* </div>  */}
 

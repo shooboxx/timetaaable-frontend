@@ -1,11 +1,12 @@
 import React from 'react';
 
 interface ButtonProps {
-    buttonType: String;
-    title: String;
+    buttonType?: String;
+    title?: String;
+    className?: String;
     // link: String,
     // disabledFlag: Boolean,
-    onclick: any
+    onclick?: any
 
 }
 const getButtonStyle = (buttonType : String) => {
@@ -19,6 +20,7 @@ const Button: React.FC<ButtonProps>  = ({
     buttonType = 'primary',
     title,
     onclick,
+    className,
     // link,
     // disabledFlag = false,
     ...props
@@ -28,7 +30,7 @@ const Button: React.FC<ButtonProps>  = ({
     let btnStyleClass = getButtonStyle(buttonType);
 
     return (
-        <button className={`${btnStyleClass} btn`} onClick={onclick}>
+        <button className={`${btnStyleClass} ${className} btn`} onClick={onclick}>
             {title}
         </button>
     )

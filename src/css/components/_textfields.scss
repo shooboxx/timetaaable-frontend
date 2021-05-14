@@ -1,6 +1,6 @@
 .textbox {
-    padding: 8px 16px;
-    margin: 8px 0 16px 0;
+    padding: 0.5em 1em;
+    margin: 0.5em 0 1em 0;
     border: 1px solid #D3D3D3;
     box-shadow: inset 0px 4px 6px rgba(58, 58, 58, 0.05);
     border-radius: 4px;
@@ -10,8 +10,8 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     font-family: 'Poppins';
-    font-size: 14px;
-    min-width: 200px;
+    font-size: 0.875em;
+    min-width: 12.5em;
     letter-spacing: 0.05rem;
 
     &::placeholder {
@@ -36,16 +36,16 @@
 }
 .search {
     width: 100%;
-    padding: 12px;
+    padding: 0.75em;
     flex-shrink: 0;
-    margin-bottom: 32px;
+    margin-bottom: 2em;
     
 
     &-container {
         width: 60%;
         flex-shrink: 0;
-        margin-right: 16px;
-        min-width: 600px;
+        margin-right: 1em;
+        min-width: 37.5em;
         box-sizing: border-box;
         align-items: center;
     }
@@ -58,6 +58,6 @@
 }
 .textarea {
     resize: none;
-    min-width: 400px;
-    min-height: 100px;
+    min-width: 25em;
+    min-height: 6.25em;
 }

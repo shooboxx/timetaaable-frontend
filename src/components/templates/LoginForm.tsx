@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { TextField } from '../inputs/TextField';
+import axios from 'axios'
+import * as Joi from 'joi';
 
 const LoginForm: React.FC = () => {
 
@@ -8,35 +10,40 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [error, setError] = useState<ErrObj>({});
 
+interface ErrObj {
+    email?: string;
+    password?: string;
+}
+
+const schema = Joi.object({
+    email: Joi.string().required().label('Email address'),
+    password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).label('Password').min(8),
+});
 const user = {
     email,
     password
 }
-interface ErrObj {
-    emailError?: string;
-    passwordError?: string;
-}
-const validate = () => {
 
-    const errors: ErrObj = {emailError: '', passwordError: ''};
-    if (email.trim() === '') {
-        errors.emailError = 'Email address is required'
+
+// Validates form properties and sets the Error state
+const validateForm = () => {
+    const errors: any= {email: '', password: ''};
+    const options = {abortEarly: false}
+    const { error } = schema.validate({email: email, password: password}, options );
+    if (error) {
+        for (let e of error.details) {
+            errors[e.path[0]] = e.message;
+        } 
+        return errors;
     }
-    if (password.trim() === '') {
-        errors.passwordError = 'Password is required'
-    }
-    return errors;
+    return errors
     
 }
 const handleSubmit = (e: any) => {
     e.preventDefault();
-    const errors = validate();
-    setError(errors)
-    if (errors.emailError !== '' || errors.passwordError !== '') {
-        return; 
-        // console.log(`${errors} this was called`)
-    }
+    setError(validateForm());
     // console.log(user);
+
 };
 
     return (
@@ -60,7 +67,7 @@ const handleSubmit = (e: any) => {
                     onChange={(e: any)=> setEmail(e.target.value)}
                     value={email}
                     className='med-textbox'
-                    error={error.emailError}
+                    error={error.email}
                 />
                 <TextField 
                     name='password'
@@ -69,7 +76,7 @@ const handleSubmit = (e: any) => {
                     onChange={(e: any)=> setPassword(e.target.value)}
                     value={password}
                     className='med-textbox'
-                    error={error.passwordError}
+                    error={error.password}
                 />
                 
                <input type="submit" value="Sign in" className='btn btn-primary btn-form' />
