@@ -1,5 +1,5 @@
 import React from 'react'
-import { DeleteBox } from '../components/surfaces/DeleteBox'
+// import { DeleteBox } from '../components/surfaces/DeleteBox'
 
 const Business: React.FC = () => {
     return (

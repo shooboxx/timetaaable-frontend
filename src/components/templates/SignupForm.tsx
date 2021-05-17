@@ -10,12 +10,12 @@ const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
 const [error, setError] = useState<ErrObj>({});
 
-const user = {
-    firstname,
-    lastName,
-    email,
-    password
-}
+// const user = {
+//     firstname,
+//     lastName,
+//     email,
+//     password
+// }
 interface ErrObj {
     emailError?: string;
     passwordError?: string;

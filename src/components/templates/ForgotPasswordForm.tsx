@@ -7,9 +7,9 @@ const ForgotPasswordForm: React.FC = () => {
 const [email, setEmail] = useState('');
 const [error, setError] = useState<ErrObj>({});
 
-const user = {
-    email
-}
+// const user = {
+//     email
+// }
 interface ErrObj {
     emailError?: string;
 }

@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { TextField } from '../inputs/TextField';
-import axios from 'axios'
+// import axios from 'axios'
 import * as Joi from 'joi';
 
 const LoginForm: React.FC = () => {
@@ -19,10 +19,10 @@ const schema = Joi.object({
     email: Joi.string().required().label('Email address'),
     password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).label('Password').min(8),
 });
-const user = {
-    email,
-    password
-}
+// const user = {
+//     email,
+//     password
+// }
 
 
 // Validates form properties and sets the Error state
