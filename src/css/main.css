@@ -151,14 +151,26 @@ table {
   margin: 0 auto;
 }
 
+.pane-left {
+  padding: 2% 0;
+  width: 50%;
+}
+
 .pane-right {
   width: 50%;
   padding: 2% 0 2% 2%;
 }
 
-.pane-left {
-  padding: 2% 0;
-  width: 50%;
+@media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .pane-left {
+    padding: 2% 0;
+    width: 50%;
+    display: none;
+  }
+  .pane-right {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .side-by-side {
@@ -241,6 +253,15 @@ table {
 
 .pane-form {
   margin-left: auto;
+}
+
+@media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .form {
+    width: 100%;
+  }
+  .pane-form {
+    margin-left: 0;
+  }
 }
 
 /******** BUTTON BASE ***********/
