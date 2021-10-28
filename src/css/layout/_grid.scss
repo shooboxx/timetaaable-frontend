@@ -8,14 +8,16 @@
 .pane {
 
     &-left {
-        padding: 2% 0;
-        width: 50%;
+        padding: 2% 4%;
+        width: 55%;
+        height: 97vh;
 
     }
     &-right {
         // background-color: map-get($ui-colors, 'gray-20' );
-        width: 50%;
-        padding: 2% 0 2% 2%;
+        width: 45%;
+        padding: 2% 0;
+        height: 97vh;
         // min-height: 50vh;
     }
 
@@ -62,4 +64,8 @@
 }
 .business-details {
     padding-top: 2rem;
+}
+
+.brand-background {
+    background-color: map-get($primary-colors , default );
 }

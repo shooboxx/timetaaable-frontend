@@ -49,12 +49,10 @@ const handleSubmit = (e: any) => {
     return (
         <div className='form pane-form'>
             <div className="side-by-side">
-                <div className="cta-title">
+                <div className="cta-title mb-32">
                     <h2 className='heading heading-3'>Sign in</h2>
                 </div>
-                <div className="linkbox">
-                    <p className='body'> Or <span className='link-text'><Link to='/signup'>Sign up</Link></span></p>
-                </div>
+
                 
             </div>
 
@@ -80,7 +78,11 @@ const handleSubmit = (e: any) => {
                 />
                 
                <input type="submit" value="Sign in" className='btn btn-primary btn-form' />
+               
             </form>    
+            <div className="linkbox">
+                    <p className='body'> Not a member? <span className='link-text'><Link to='/signup'>Sign up</Link></span></p>
+            </div>
 
 
         </div>

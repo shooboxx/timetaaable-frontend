@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,500&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap');
 .empty {
     color: map-get($ui-colors, gray-60 );
     font-size: 1.25em;
@@ -12,7 +13,7 @@
 
 .heading {
     color: map-get($ui-colors, gray-100 );
-    font-weight: 600;
+    font-weight: 500;
 
     &-1 {
         font-size: 3.125em;
@@ -36,6 +37,7 @@
 .body {
     color: map-get($ui-colors, gray-80 );
     margin-bottom: 1em;
+    font-family: 'Poppins';
 
     &-big {
         font-size: 1em;
@@ -59,5 +61,15 @@
 
 .link-text a {
     color: map-get($primary-colors, 'default');
-    font-weight: 600;
+    font-weight: normal;
 }
+
+.display-text {
+    font-size: 4em;
+    line-height: 1.15em;
+    margin-bottom: 1em;
+    width: 60%;
+    color: map-get($ui-colors, gray-0);
+    text-transform: uppercase;
+    font-weight: bold;
+  }

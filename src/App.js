@@ -15,7 +15,7 @@ function App() {
         
       </header>
       <div className='content'>
-      <Navbar />
+      {/* <Navbar /> */}
         <Switch>
             
             <Route path='/signin' render={()=> <Login /> } /> 

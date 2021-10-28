@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,900;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;1,500&display=swap");
 body {
   background-color: #ffffff;
 }
@@ -82,7 +84,7 @@ table {
 
 .heading {
   color: #3a3a3a;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .heading-1 {
@@ -93,7 +95,7 @@ table {
 .heading-2 {
   font-size: 2.1875em;
   margin-bottom: 1em;
-  color: #09BF9C;
+  color: #44CDCA;
 }
 
 .heading-3 {
@@ -107,6 +109,7 @@ table {
 .body {
   color: #6D6D6D;
   margin-bottom: 1em;
+  font-family: 'Poppins';
 }
 
 .body-big {
@@ -129,8 +132,18 @@ table {
 }
 
 .link-text a {
-  color: #09BF9C;
-  font-weight: 600;
+  color: #44CDCA;
+  font-weight: normal;
+}
+
+.display-text {
+  font-size: 4em;
+  line-height: 1.15em;
+  margin-bottom: 1em;
+  width: 60%;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .center {
@@ -152,13 +165,15 @@ table {
 }
 
 .pane-left {
-  padding: 2% 0;
-  width: 50%;
+  padding: 2% 4%;
+  width: 55%;
+  height: 97vh;
 }
 
 .pane-right {
-  width: 50%;
-  padding: 2% 0 2% 2%;
+  width: 45%;
+  padding: 2% 0;
+  height: 97vh;
 }
 
 @media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -199,6 +214,10 @@ table {
 
 .business-details {
   padding-top: 2rem;
+}
+
+.brand-background {
+  background-color: #44CDCA;
 }
 
 .footer {
@@ -252,7 +271,7 @@ table {
 }
 
 .pane-form {
-  margin-left: auto;
+  margin: auto;
 }
 
 @media only screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
@@ -267,7 +286,7 @@ table {
 /******** BUTTON BASE ***********/
 .btn {
   min-width: 100px;
-  padding: 8px 32px;
+  padding: 12px 32px;
   border: 0;
   border-radius: 4px;
   font-size: 16px;
@@ -304,20 +323,20 @@ table {
 }
 
 .btn-primary {
-  background-color: #09BF9C;
+  background-color: #44CDCA;
   color: #ffffff;
   -webkit-box-shadow: 0px 6px 20px rgba(9, 191, 156, 0.2);
           box-shadow: 0px 6px 20px rgba(9, 191, 156, 0.2);
 }
 
 .btn-primary:hover {
-  background-color: #11D7B1;
+  background-color: #4BE0DD;
   -webkit-box-shadow: 0px 2px 4px rgba(58, 58, 58, 0.04), 0px 12px 16px rgba(9, 191, 156, 0.25);
           box-shadow: 0px 2px 4px rgba(58, 58, 58, 0.04), 0px 12px 16px rgba(9, 191, 156, 0.25);
 }
 
 .btn-primary:active {
-  background-color: #0CA486;
+  background-color: #3DB2B0;
   -webkit-box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
           box-shadow: 0px 0px 0px rgba(255, 255, 255, 0);
 }
@@ -440,7 +459,7 @@ table {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
 }
@@ -514,6 +533,7 @@ table {
   min-height: 100px;
   min-width: 350px;
   margin-bottom: 16px;
+  max-width: 60rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,14 +741,19 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: inline-block;
-  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 100;
+      -ms-flex-positive: 100;
+          flex-grow: 100;
 }
 
 .search-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 60rem;
 }
 
 .textarea {
